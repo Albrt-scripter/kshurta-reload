@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #303749;
+}
+
+@font-face {
+  font-family: "Raleway";
+
+  src: url("/fonts/Raleway-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    font-family: "Raleway", sans-serif;
+    background-color: #fef9ed;
+    margin: 20px 24px;
+  }
+
+  h1 {
+    font-size: 27px;
+    line-height: 140%;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 140%;
+  }
+
+  h4,
+  h5 {
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  h6 {
+    font-size: 15px;
+    line-height: 180%;
+  }
+
+  .small {
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
