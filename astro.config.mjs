@@ -6,7 +6,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   output: "static",
   vite: {
-    // assetsInclude: ["**/*.woff2", "**/*.webp", "**/*.avif"],
     plugins: [tailwindcss()],
   },
 });

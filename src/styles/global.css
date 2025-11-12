@@ -1,78 +1,52 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @theme {
   --color-primary: #303749;
-}
-
-@font-face {
-  font-family: "Raleway";
-
-  src: url("/fonts/Raleway-Regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-Medium.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-SemiBold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-Bold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
+  --color-secondary: rgba(48, 55, 73, 0.6);
+  --color-green: #6c943c;
+  --font-raleway: "Raleway", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @layer base {
   body {
-    font-family: "Raleway", sans-serif;
-    background-color: #fef9ed;
-    margin: 20px 24px;
+    @apply font-raleway bg-[#fef9ed] my-5 text-primary;
   }
 
   h1 {
-    font-size: 27px;
-    line-height: 140%;
-    font-weight: 600;
+    font-size: 27px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
   }
-
   h2 {
-    font-size: 24px;
-    line-height: 140%;
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
   }
-
   h3 {
-    font-size: 22px;
-    line-height: 140%;
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
   }
-
   h4,
   h5 {
-    font-size: 20px;
-    line-height: 140%;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
   }
-
   h6 {
-    font-size: 15px;
-    line-height: 180%;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
   }
+}
 
-  .small {
-    font-size: 12px;
-    line-height: 140%;
+@layer components {
+  .text-secondary {
+    @apply text-[12px] leading-[1.4] text-secondary;
+  }
+  .space-x {
+    @apply mx-6;
   }
 }
