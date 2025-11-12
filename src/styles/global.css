@@ -2,6 +2,7 @@
 @import "./fonts.css";
 
 @theme {
+  --color-white: #fef9ed;
   --color-primary: #303749;
   --color-secondary: rgba(48, 55, 73, 0.6);
   --color-green: #6c943c;
@@ -11,34 +12,24 @@
 
 @layer base {
   body {
-    @apply font-raleway bg-[#fef9ed] my-5 text-primary;
+    @apply font-raleway bg-white my-5 text-primary;
   }
 
   h1 {
-    font-size: 27px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
+    @apply text-[27px] leading-[1.4] font-semibold;
   }
   h2 {
-    font-size: 24px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
+    @apply text-[24px] leading-[1.4] font-semibold;
   }
   h3 {
-    font-size: 22px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
+    @apply text-[22px] leading-[1.4] font-semibold;
   }
   h4,
   h5 {
-    font-size: 20px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
+    @apply text-[20px] leading-[1.4] font-semibold;
   }
   h6 {
-    font-size: 15px !important;
-    line-height: 1.8 !important;
-    font-weight: 400 !important;
+    @apply text-[15px] leading-[1.8];
   }
 }
 
