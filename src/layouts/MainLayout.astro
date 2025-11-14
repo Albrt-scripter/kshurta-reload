@@ -4,7 +4,7 @@ import "../styles/global.css";
 import Footer from "@components/Footer.astro";
 ---
 
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,7 +21,7 @@ import Footer from "@components/Footer.astro";
   <body class="text-primary flex flex-col gap-12.5">
     <Header />
 
-    <main class="flex flex-col gap-25">
+    <main class="flex flex-col section-gap">
       <slot />
     </main>
 

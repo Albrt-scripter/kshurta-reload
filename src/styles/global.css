@@ -6,38 +6,47 @@
   --color-primary: #303749;
   --color-secondary: rgba(48, 55, 73, 0.6);
   --color-green: #6c943c;
+
+  --container-8xl: 90rem;
+  --container-9xl: 100rem;
+
   --font-raleway: "Raleway", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
 
 @layer base {
   body {
-    @apply font-raleway bg-white my-5 text-primary;
+    @apply font-raleway bg-white my-5 text-primary max-w-9xl mx-auto;
   }
 
   h1 {
-    @apply text-[27px] leading-[1.4] font-semibold;
+    @apply text-[27px] leading-[1.4] font-semibold md:text-[32px] lg:text-[42px] xl:text-[60px] 2xl:text-[70px];
   }
   h2 {
-    @apply text-[24px] leading-[1.4] font-semibold;
+    @apply text-[24px] leading-[1.4] font-semibold xl:text-[44px];
   }
   h3 {
-    @apply text-[22px] leading-[1.4] font-semibold;
+    @apply text-[22px] leading-[1.4] font-semibold xl:text-[30px];
   }
-  h4,
+  h4 {
+    @apply text-[20px] leading-[1.4] font-semibold xl:text-[26px];
+  }
   h5 {
-    @apply text-[20px] leading-[1.4] font-semibold;
+    @apply text-[20px] leading-[1.4] font-semibold xl:text-[22px];
   }
   h6 {
-    @apply text-[15px] leading-[1.8];
+    @apply text-[15px] leading-[1.8] xl:text-[18px];
   }
 }
 
 @layer components {
   .text-secondary {
-    @apply text-[12px] leading-[1.4] text-secondary;
+    @apply text-[12px] leading-[1.4] text-secondary xl:text-[14px];
   }
   .space-x {
-    @apply mx-6;
+    @apply mx-6 md:mx-10 lg:mx-15 xl:mx-25;
+  }
+  .section-gap {
+    @apply gap-15 md:gap-20 lg:gap-25;
   }
 }

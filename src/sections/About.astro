@@ -4,18 +4,26 @@ import AnchorButton from "@components/AnchorButton.astro";
 import { Image } from "astro:assets";
 ---
 
-<section id="about" class="space-x flex flex-col gap-10">
-  <Image src={aboutIll} alt="hero-ill" width={640} />
+<section id="about" class="space-x flex flex-col gap-10 lg:flex-row">
+  <Image
+    src={aboutIll}
+    alt="hero-ill"
+    width={640}
+    densities={[1.5, 2]}
+    class="md:w-3/5 lg:w-5/10 place-self-center"
+  />
 
-  <article class="flex flex-col gap-2.5">
-    <h1 class="font-semibold">Палаточный лагерь «Седой Кшурт»</h1>
-    <h6>
-      Место, где чистый горный воздух, потрясающие виды и настоящая свобода
-      сливаются воедино. Здесь вас ждут захватывающие походы, уютные вечера у
-      костра и полное единение с природой. Независимо от того, ищете ли вы
-      активный отдых или тихий уголок для перезагрузки, у нас есть всё для
-      комфортного пребывания в горах.
-    </h6>
+  <article class="flex flex-col gap-5 lg:justify-between">
+    <div class="flex flex-col gap-2.5 md:text-center lg:text-start">
+      <h1 class="font-semibold">Палаточный лагерь «Седой Кшурт»</h1>
+      <h6>
+        Место, где чистый горный воздух, потрясающие виды и настоящая свобода
+        сливаются воедино. Здесь вас ждут захватывающие походы, уютные вечера у
+        костра и полное единение с природой. Независимо от того, ищете ли вы
+        активный отдых или тихий уголок для перезагрузки, у нас есть всё для
+        комфортного пребывания в горах.
+      </h6>
+    </div>
 
     <AnchorButton />
   </article>

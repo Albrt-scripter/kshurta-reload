@@ -8,14 +8,20 @@ import { links } from "@constants/links";
 ---
 
 <div class="border-t-2 border-green"></div>
-<footer class="space-x flex flex-col gap-12.5 pt-12.5">
+<footer class="space-x flex gap-12.5 pt-12.5 lg:justify-between flex-wrap">
   <Image src={logoImage} alt="..." width={312} height={200} />
 
   <div class="flex flex-col gap-2.5">
-    {links.map((link) => <Anchor href={link.href}>{link.title}</Anchor>)}
+    {
+      links.map((link) => (
+        <Anchor href={link.href}>
+          <h5>{link.title}</h5>
+        </Anchor>
+      ))
+    }
   </div>
 
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col flex-wrap gap-4">
     <div class="flex flex-col gap-2.5">
       <h5 class="font-normal">Часы работы отдела бронирования:</h5>
       <h5 class="font-inter font-normal">
@@ -28,6 +34,8 @@ import { links } from "@constants/links";
         +7-909-475-59-13 <span class="text-secondary">(Наталья)</span>
       </h5>
     </div>
+  </div>
+  <div class="flex flex-col gap-2.5">
     <h5 class="font-normal">kshurta.info@gmail.com</h5>
     <Image src={instagramIcon} alt="instagram-icon" />
   </div>

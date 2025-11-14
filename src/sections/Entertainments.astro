@@ -4,16 +4,21 @@ import { accordions } from "../constants/accordions";
 import SectionHeading from "@components/SectionHeading.astro";
 ---
 
-<section id="entertainment" class="border-b-2 border-green flex flex-col gap-7.5">
+<section
+  id="entertainment"
+  class="border-b-2 border-green flex flex-col gap-7.5"
+>
   <SectionHeading>Досуг и развлечения</SectionHeading>
   <article class="flex flex-col">
     {
       accordions.map((acc) => (
         <Accordion open={acc.open}>
-          <Fragment slot="title">{acc.title}</Fragment>
+          <Fragment slot="title">
+            {acc.title}
+            {acc.small && <span class="text-secondary pl-1">{acc.small}</span>}
+          </Fragment>
           <Fragment slot="description">
             <p>{acc.description}</p>
-            {acc.small && <span class="text-secondary">{acc.small}</span>}
           </Fragment>
         </Accordion>
       ))

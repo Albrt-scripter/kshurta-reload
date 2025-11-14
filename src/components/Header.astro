@@ -1,10 +1,27 @@
 ---
+import instagramImage from "@assets/icons/instagram.svg";
 import logoImage from "@assets/images/logos/logo.png";
-import burgerToggle from "@assets/icons/burger-toggle.svg";
+import BurderMenu from "./BurderMenu.astro";
+import Anchor from "./Anchor.astro";
+
 import { Image } from "astro:assets";
+import { links } from "@constants/links";
 ---
 
 <header class="space-x flex items-center justify-between">
   <Image class="w-[97px] h-[68px]" src={logoImage} alt="logo" />
-  <Image src={burgerToggle} alt="/icons/burger-toggle" />
+  <nav class="items-center gap-3 lg:gap-6 xl:gap-8 2xl:gap-10 hidden md:flex">
+    {
+      links.map((l) => (
+        <Anchor href={l.href}>
+          <h6>{l.title}</h6>
+        </Anchor>
+      ))
+    }
+  </nav>
+  <div class="hidden md:flex items-center gap-5">
+    <h6 class="font-inter font-normal">+7 900 800 00 00</h6>
+    <Image class="hidden lg:block" src={instagramImage} alt="instagram-image" />
+  </div>
+  <BurderMenu />
 </header>

@@ -3,8 +3,11 @@ import formImage from "@assets/images/form-ill.png";
 import { Image } from "astro:assets";
 ---
 
-<section id="form" class="space-x flex flex-col gap-7.5 mb-12.5">
-  <Image src={formImage} alt="form-ill" />
+<section
+  id="form"
+  class="space-x flex flex-col gap-7.5 mb-12.5 lg:flex-row-reverse lg:items-center"
+>
+  <Image src={formImage} alt="form-ill" class="lg:w-8/12" />
 
   <article class="flex flex-col gap-7.5">
     <div class="text-center flex flex-col gap-2.5">

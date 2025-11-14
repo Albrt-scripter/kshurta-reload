@@ -1,0 +1,71 @@
+---
+import burgerToggle from "@assets/icons/burger-toggle.svg";
+import crossIcon from "@assets/icons/cross.svg";
+import instagramIcon from "@assets/icons/instagram.svg";
+
+import { links } from "@constants/links";
+import { Image } from "astro:assets";
+import Anchor from "./Anchor.astro";
+---
+
+<button id="burger-toggle" data-state="closed" class="md:hidden">
+  <Image src={burgerToggle} alt="burger-toggle" />
+</button>
+
+<div
+  id="burger-container"
+  data-state="closed"
+  class="fixed inset-0 transition-all duration-300 ease-in-out w-screen h-screen top-0 left-full flex flex-col justify-center data-[state=open]:left-0 bg-white"
+>
+  <button id="burger-close" class="absolute top-[6%] right-[8%]">
+    <Image src={crossIcon} alt="cross-icon" />
+  </button>
+
+  <div class="flex flex-col gap-10 items-center justify-center">
+    <div class="text-center flex flex-col gap-5">
+      {
+        links.map((l) => (
+          <Anchor className="burger-anchor-link" href={l.href}>
+            <h5 class="font-normal">{l.title}</h5>
+          </Anchor>
+        ))
+      }
+    </div>
+
+    <div class="flex flex-col items-center gap-2.5">
+      <h5 class="font-inter font-normal">+7 900 800 00 00</h5>
+      <Image src={instagramIcon} alt="instagram-icon" />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerToggle = document.getElementById("burger-toggle");
+    const burgerContainer = document.getElementById("burger-container");
+    const burgerClose = document.getElementById("burger-close");
+
+    const burgerLinks = document.querySelectorAll(".burger-anchor-link");
+
+    if (!burgerToggle || !burgerContainer || !burgerClose) return;
+
+    burgerLinks.forEach((l) => {
+      l.addEventListener("click", function () {
+        burgerToggle.dataset.state = "closed";
+        burgerContainer.dataset.state = "closed";
+      });
+    });
+
+    burgerToggle.addEventListener("click", function () {
+      const isOpen = burgerToggle.dataset.state === "open";
+
+      burgerToggle.dataset.state = isOpen ? "closed" : "open";
+      burgerContainer.dataset.state = isOpen ? "closed" : "open";
+    });
+
+    burgerClose.addEventListener("click", function () {
+      burgerToggle.dataset.state = "closed";
+      burgerContainer.dataset.state = "closed";
+    });
+  });
+</script>
