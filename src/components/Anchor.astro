@@ -7,6 +7,6 @@ interface Props {
 const { href, className } = Astro.props;
 ---
 
-<a class={`text-primary ${className}`} href={`#${href}`}>
+<a class={`text-primary hover:underline ${className}`} href={`#${href}`}>
   <slot />
 </a>

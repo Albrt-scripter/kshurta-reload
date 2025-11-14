@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 ---
 
 <section
-  id="form"
+  id="form-section"
   class="space-x flex flex-col gap-7.5 mb-12.5 lg:flex-row-reverse lg:items-center"
 >
   <Image src={formImage} alt="form-ill" class="lg:w-8/12" />
@@ -16,14 +16,21 @@ import { Image } from "astro:assets";
         Оставь заявку, чтобы отправиться в это путешествие
       </h4>
     </div>
-    <form action="" class="flex flex-col gap-7.5">
+    <form
+      method="POST"
+      action="/api/send.php"
+      id="form"
+      class="flex flex-col gap-7.5"
+    >
       <div class="flex flex-col gap-5">
         <div
           class="flex flex-col gap-1 px-6 py-2.5 border-2 border-primary rounded-xl"
         >
           <label class="text-primary text-[12px]" for="name">Имя</label>
           <input
+            required
             id="name"
+            name="name"
             placeholder="Иван Иванов"
             type="text"
             class="outline-none border-none"
@@ -37,11 +44,13 @@ import { Image } from "astro:assets";
             >Телефон</label
           >
           <input
+            required
             id="phonenumber"
+            name="phonenumber"
             placeholder="+7 900 800 00 00"
             type="tel"
             inputmode="tel"
-            class="placeholder:font-inter outline-none border-none"
+            class="font-inter outline-none border-none"
           />
         </div>
       </div>
@@ -53,3 +62,88 @@ import { Image } from "astro:assets";
     </form>
   </article>
 </section>
+
+<script>
+  import successIcon from "@assets/icons/success.svg";
+  import errorIcon from "@assets/icons/error.svg";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form") as HTMLFormElement;
+
+    if (!form) return;
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      if (!e.target) return;
+
+      const formData = new FormData(form);
+
+      const response = await fetch("/api/send.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then(async (res) => {
+          const result = await res.json();
+
+          if (res.ok) {
+            showToast("Письмо отправлено!", "success");
+            form.reset();
+          } else {
+            showToast(result.error || "Ошибка отправления!", "error");
+          }
+        })
+        .catch((e) => showToast("Ошибка отправления!", "error"));
+    });
+  });
+
+  function showToast(message: string, type = "success") {
+    const oldToast = document.getElementById("toast");
+    oldToast?.remove();
+
+    const icon = type === "success" ? successIcon : errorIcon;
+
+    const toast = document.createElement("div");
+    toast.id = "toast";
+    toast.innerHTML = `
+        <div class="flex items-center justify-center w-7/10 gap-3 px-3 py-2 rounded-lg shadow-lg opacity-0 -translate-y-4 transition-all bg-white duration-300 pointer-events-none fixed top-4 left-1/2 -translate-x-1/2 z-50">
+          <img class="w-8 h-8" src="${icon.src}" alt="error-icon" />
+          <h6 class="font-bold">${message}</h6>
+        </div>
+      `;
+
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      const inner = toast.firstElementChild;
+      inner?.classList.remove(
+        "opacity-0",
+        "-translate-y-4",
+        "pointer-event-none"
+      );
+      inner?.classList.add(
+        "opacity-100",
+        "translate-y-0",
+        "pointer-event-auto"
+      );
+    });
+
+    setTimeout(() => {
+      const inner = toast.firstElementChild;
+      inner?.classList.remove(
+        "opacity-100",
+        "translate-y-0",
+        "pointer-events-auto"
+      );
+      inner?.classList.add(
+        "opacity-0",
+        "-translate-y-4",
+        "pointer-events-none"
+      );
+
+      inner?.addEventListener("transitionend", () => toast.remove(), {
+        once: true,
+      });
+    }, 3000);
+  }
+</script>

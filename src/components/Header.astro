@@ -20,8 +20,16 @@ import { links } from "@constants/links";
     }
   </nav>
   <div class="hidden md:flex items-center gap-5">
-    <h6 class="font-inter font-normal">+7 900 800 00 00</h6>
-    <Image class="hidden lg:block" src={instagramImage} alt="instagram-image" />
+    <h6 class="font-inter font-normal">
+      <a href="tel:+79008000000">+7 900 800 00 00</a>
+    </h6>
+    <a href="https://www.instagram.com/camping_kshurta">
+      <Image
+        class="hidden lg:block"
+        src={instagramImage}
+        alt="instagram-image"
+      />
+    </a>
   </div>
   <BurderMenu />
 </header>

@@ -31,12 +31,17 @@ import { links } from "@constants/links";
     <div class="flex flex-col gap-2.5">
       <h5 class="font-normal">Администратор лагеря</h5>
       <h5 class="font-inter font-normal">
-        +7-909-475-59-13 <span class="text-secondary">(Наталья)</span>
+        <a href="tel:+79094755913">+7-909-475-59-13</a>
+        <span class="text-secondary">(Наталья)</span>
       </h5>
     </div>
   </div>
   <div class="flex flex-col gap-2.5">
-    <h5 class="font-normal">kshurta.info@gmail.com</h5>
-    <Image src={instagramIcon} alt="instagram-icon" />
+    <a href="mailto:kshurta.info@gmail.com?body=Здравствйте&subject=Вопрос">
+      <h5 class="font-normal">kshurta.info@gmail.com</h5>
+    </a>
+    <a href="https://www.instagram.com/camping_kshurta" class="w-fit">
+      <Image src={instagramIcon} alt="instagram-icon" />
+    </a>
   </div>
 </footer>
