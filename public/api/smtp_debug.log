@@ -1,0 +1,85 @@
+1: SMTP ERROR: Failed to connect to server:  (0)
+1: SMTP ERROR: Failed to connect to server:  (0)
+1: SMTP ERROR: Failed to connect to server:  (0)
+2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+1: SMTP ERROR: Failed to connect to server:  (0)
+2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2: SERVER -> CLIENT: 220 mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net Ok 1763141488-SVVvHlJLP4Y0
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Authentication successful. 1763141488-SVVvHlJLP4Y0
+
+1: CLIENT -> SERVER: MAIL FROM:<xXxTommyStarkxXx@yandex.ru>
+
+2: SERVER -> CLIENT: 250 2.1.0 <xXxTommyStarkxXx@yandex.ru> ok 1763141488-SVVvHlJLP4Y0-VvIGk9B9
+
+1: CLIENT -> SERVER: RCPT TO:<xXxTommyStarkxXx@yandex.ru>
+
+2: SERVER -> CLIENT: 250 2.1.5 <xXxTommyStarkxXx@yandex.ru> recipient ok 1763141489-SVVvHlJLP4Y0-VvIGk9B9
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Start mail input, end with <CRLF>.<CRLF>
+
+1: CLIENT -> SERVER: Date: Fri, 14 Nov 2025 17:31:27 +0000
+
+1: CLIENT -> SERVER: To: xXxTommyStarkxXx@yandex.ru
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <xXxTommyStarkxXx@yandex.ru>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <y9IO7gBuheNlJxcTtds3qh0ObNIzc2fhhDf7iNYnI@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>123</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:213'>213</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net 1763141489-SVVvHlJLP4Y0-VvIGk9B9
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 Closing connecton
+

@@ -7,5 +7,16 @@ export default defineConfig({
   output: "static",
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      proxy:
+        process.env.NODE_ENV === "development"
+          ? {
+              "/api": {
+                target: "http://localhost:8000",
+                changeOrigin: true,
+              },
+            }
+          : {},
+    },
   },
 });
