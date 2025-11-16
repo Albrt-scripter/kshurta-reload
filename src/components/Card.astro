@@ -9,7 +9,7 @@ const { image } = Astro.props;
 ---
 
 <div class="relative place-self-center">
-  <Image src={image} alt="first-card-image" width={547} />
+  <Image src={image} alt="first-card" width={547} />
   <div class="absolute px-5 pb-5 bottom-0 text-white flex flex-col gap-2.5">
     <slot name="title" />
     <slot name="description" />

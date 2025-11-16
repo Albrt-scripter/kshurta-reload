@@ -9,7 +9,7 @@ import { links } from "@constants/links";
 ---
 
 <header class="space-x flex items-center justify-between">
-  <Image class="w-[97px] h-[68px]" src={logoImage} alt="logo" />
+  <Image class="w-[97px] h-[68px]" src={logoImage} alt="logo" loading="eager" />
   <nav class="items-center gap-3 lg:gap-6 xl:gap-8 2xl:gap-10 hidden md:flex">
     {
       links.map((l) => (
@@ -21,13 +21,14 @@ import { links } from "@constants/links";
   </nav>
   <div class="hidden md:flex items-center gap-5">
     <h6 class="font-inter font-normal">
-      <a href="tel:+79008000000">+7 900 800 00 00</a>
+      <a href="tel:+79094755913">+7-909-475-59-13</a>
     </h6>
-    <a href="https://www.instagram.com/camping_kshurta">
+    <a href="https://www.instagram.com/camping_kshurta" target="_blank">
       <Image
         class="hidden lg:block"
         src={instagramImage}
-        alt="instagram-image"
+        alt="instagram-icon"
+        loading="eager"
       />
     </a>
   </div>

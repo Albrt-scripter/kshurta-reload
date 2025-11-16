@@ -9,7 +9,9 @@ import { links } from "@constants/links";
 
 <div class="border-t-2 border-green"></div>
 <footer class="space-x flex gap-12.5 pt-12.5 lg:justify-between flex-wrap">
-  <Image src={logoImage} alt="..." width={312} height={200} />
+  <a href="#top">
+    <Image src={logoImage} alt="..." width={312} height={200} />
+  </a>
 
   <div class="flex flex-col gap-2.5">
     {
@@ -37,10 +39,14 @@ import { links } from "@constants/links";
     </div>
   </div>
   <div class="flex flex-col gap-2.5">
-    <a href="mailto:kshurta.info@gmail.com?body=Здравствйте&subject=Вопрос">
-      <h5 class="font-normal">kshurta.info@gmail.com</h5>
+    <a href="mailto:Kshurta.camping@ya.ru?body=Добрый день,&subject=Вопрос">
+      <h5 class="font-normal">Kshurta.camping@ya.ru</h5>
     </a>
-    <a href="https://www.instagram.com/camping_kshurta" class="w-fit">
+    <a
+      href="https://www.instagram.com/camping_kshurta"
+      target="_blank"
+      class="w-fit"
+    >
       <Image src={instagramIcon} alt="instagram-icon" />
     </a>
   </div>
