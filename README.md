@@ -1,6 +1,5 @@
 # Палаточный лагерь «Седой Кшурт»
 
-![Preview](https://via.placeholder.com/1200x600.png?text=Седой+Кшурт+·+Лагерь)  
 _Лендинг-презентация лагеря в Северной Осетии_
 
 > **«Седой Кшурт»** – идеальное место для отдыха на природе! Окунитесь в атмосферу уюта и приключений среди живописных гор и чистых рек.  
@@ -35,8 +34,8 @@ _Лендинг-презентация лагеря в Северной Осет
 
 ```bash
 # Клонировать
-git clone https://github.com/ВАШ_НИК/sedoy-kshurt.git
-cd sedoy-kshurt
+git clone https://github.com/AmletixQ/kshurta-reload.git
+cd kshurta-reload
 
 # Установить зависимости
 npm install
